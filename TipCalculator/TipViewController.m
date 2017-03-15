@@ -10,8 +10,10 @@
 
 @interface TipViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
-@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property (weak, nonatomic) IBOutlet UILabel *lowTipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mediumTipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *highTipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end
@@ -55,7 +57,9 @@
   float totalAmount = billAmount + tipAmount;
 
   // update UI
-  self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
+  self.lowTipLabel.text = [NSString stringWithFormat:@"($%0.2f)", [tipValues[0] floatValue] * billAmount];
+  self.mediumTipLabel.text = [NSString stringWithFormat:@"($%0.2f)", [tipValues[1] floatValue] * billAmount];
+  self.highTipLabel.text = [NSString stringWithFormat:@"($%0.2f)", [tipValues[2] floatValue] * billAmount];
   self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
 }
 
