@@ -4,7 +4,7 @@ Tip Calculator is a simple application for iOS.
 
 Submitted by: Alan Hamlett
 
-Time spent: *4 hrs 43 mins 41 secs* spent in total
+Time spent: [4 hrs 43 mins 41 secs][time spent coding] spent in total
 
 ## User Stories
 
@@ -49,3 +49,6 @@ Challenges encountered while building the app:
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
+
+[time spent coding]: https://wakatime.com/@alan/projects/oylewxuipe?start=2017-03-09&end=2017-03-15
