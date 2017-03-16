@@ -23,12 +23,16 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.title = @"Tip Calculator";
-  [self updateValues];
+  [self loadDefaults];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [self loadDefaults];
 }
 
 - (IBAction)onTap:(UITapGestureRecognizer *)sender {
@@ -42,6 +46,17 @@
 
 - (IBAction)onTipSelected:(UISegmentedControl *)sender {
   [self.view endEditing:true];
+  [self updateValues];
+}
+
+- (void)loadDefaults {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  NSDictionary *tipValues = @{ @0.15: @0, @0.2: @1, @0.25: @2 };
+  NSNumber *defaultTip = [defaults objectForKey:@"tipcalculator.settings.default_tip"];
+  if ([tipValues objectForKey:defaultTip] == nil)
+    defaultTip = @0.2;
+  int tipIndex = [tipValues[defaultTip] intValue];
+  [self.tipControl setSelectedSegmentIndex:tipIndex];
   [self updateValues];
 }
 
