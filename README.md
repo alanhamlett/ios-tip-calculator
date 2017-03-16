@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-**TODO**
+![Video Walkthrough](./demo.gif "Video Walkthrough")
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
