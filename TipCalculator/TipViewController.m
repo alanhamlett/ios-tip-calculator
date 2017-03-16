@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.title = @"Tip Calculator";
+  [self.billTextField becomeFirstResponder];
   [self loadDefaults];
 }
 
