@@ -4,7 +4,7 @@ Tip Calculator is a simple application for iOS.
 
 Submitted by: Alan Hamlett
 
-Time spent: **TODO** spent in total
+Time spent: *4 hrs 43 mins 41 secs* spent in total
 
 ## User Stories
 
